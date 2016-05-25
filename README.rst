@@ -114,5 +114,6 @@ Testing
 =======
 
 Unit tests provided. Module may be tested using the command
+
 ```python -m unittest discover```
 
