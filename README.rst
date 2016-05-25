@@ -34,15 +34,15 @@ API
 
    class Person:
        def __init__(self, first_name, last_name, street_addresses, email_addresses, phone_numbers)
-
-   Create the instance with provided parametars. All need to be non-empty
+ 
+   # Create the instance with provided parameters. All of them need to be non-empty.
 
 .. code-block:: python
 
    class Group:
        def __init__(self, persons={})
 
-   Create a new group with optional set of Person instances
+   # Create a new group with optional set of Person instances
 
 
 .. code-block:: python
@@ -50,67 +50,69 @@ API
    class AddressBook:
        def __init__(self, persons={}, groups={})
 
-   Create the instance of the address book. Initial set of Group and Person instances is optional
+   # Create the instance of the address book. Initial set of Group and Person instances is optional
 
 .. code-block:: python
 
    def add_person(self, person):
 
-   Add the instance of Person
+   # Add the instance of Person
 
 .. code-block:: python
 
    def add_group(self,group):
 
-   Add the instance of Group
+   # Add the instance of Group
 
 .. code-block:: python
 
    def get_person_groups(self, person):
 
-   Get all groups that provided person belongs to
+   # Get all groups that provided person belongs to
 
 .. code-block:: python
 
    def get_group_persons(self, group):
 
-   Get all persons that belong to specified group
+   # Get all persons that belong to specified group
 
 .. code-block:: python
 
    def remove_person(self, person):
 
-   Remove the instance of Person
+   # Remove the instance of Person
 
 .. code-block:: python
 
    def remove_group(self, group):
 
-   Remove the instance of Group
+   # Remove the instance of Group
 
 .. code-block:: python
 
    def clean(self, group):
 
-   Clean users and groups
+   # Clean users and groups
 
 .. code-block:: python
 
-   def get_persons_by_name(self, search_string='', first_name='', last_name='', case_sensitive=False, equal=False):
+   def get_persons_by_name(self, search_string='', first_name='', last_name='',
+                           case_sensitive=False, equal=False):
 
-   Searching by provided strings.
-   'search_string' is used instead of missing 'first_name' or 'last_name'.
+   # Searching by provided strings.
+   # 'search_string' is used instead of missing 'first_name' or 'last_name'.
 
 .. code-block:: python
 
    def get_persons_by_email_address(self, email_address):
 
-    Searching by provided email address. Case insensite search for Person
-    objects with any email address including provided text.
+   # Searching by provided email address. Case insensite search for Person
+   # objects with any email address including provided text.
 
 
 Testing
-===
+=======
+
 Unit tests provided. Module may be tested using the command
 ```python -m unittest discover```
 

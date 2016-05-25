@@ -3,6 +3,7 @@ from addressbook.person import Person
 from addressbook.group import Group
 from addressbook.addressbook import AddressBook
 
+
 class PersonTest(unittest.TestCase):
     def test_add_person(self):
         self.assertRaises(AttributeError, Person, 'First name', '', ['street'], ['expresident@archive.org'], ['112'])
